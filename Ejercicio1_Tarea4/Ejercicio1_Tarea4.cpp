@@ -7,8 +7,12 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main() {
+    
+    cout << "Ingresa el numero de terminos de la sumatoria" << endl;
+    
     
     return 0;
 }
