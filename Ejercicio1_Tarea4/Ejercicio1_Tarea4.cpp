@@ -11,7 +11,8 @@ using namespace std;
 
 int main() {
     
-    int iTerminos, iNum, iDen;
+    int iTerminos, iNum, iDen, iTest = 1;
+    double iTotal;
     
     cout << "Ingresa el numero de terminos de la sumatoria" << endl;
     cin >> iTerminos;
@@ -21,23 +22,28 @@ int main() {
     cin>> iDen;
     
     for (int iContador=2; iContador<=iTerminos; iContador=iContador+1) {
-        cout << iNum << '/' <<iDen << " + ";
         
-        if (iDen%2==0) {
+        
+        if (iTest == 1){
+            cout << iNum << '/' <<iDen << " + ";
+            iTest++;
+        }
+        
+        if (iDen % 2 == 0) {
             iDen=iDen+3;
             iNum++;
             cout << iNum << '/' << iDen << " + ";
         }
         
-        // para que esto jale i contador se debe de inicializar en 1
-        if (iDen%2!=0) {
+        else if(iDen % 2 != 0) {
             iDen=iDen+1;
             iNum++;
             cout << iNum << '/' << iDen << " + ";
+        
         }
         
+        
     }
-    
     
     return 0;
 }
