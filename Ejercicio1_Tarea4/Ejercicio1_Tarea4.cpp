@@ -15,12 +15,28 @@ int main() {
     
     cout << "Ingresa el numero de terminos de la sumatoria" << endl;
     cin >> iTerminos;
-    cout << "ingresa el numerador inicial"
+    cout << "ingresa el numerador inicial" << endl;
     cin >> iNum;
-    cout<< "Ingresa el Denominador inicial"
+    cout<< "Ingresa el Denominador inicial" << endl;
     cin>> iDen;
     
-    
+    for (int iContador=2; iContador<=iTerminos; iContador=iContador+1) {
+        cout << iNum << '/' <<iDen << " + ";
+        
+        if (iDen%2==0) {
+            iDen=iDen+3;
+            iNum++;
+            cout << iNum << '/' << iDen << " + ";
+        }
+        
+        // para que esto jale i contador se debe de inicializar en 1
+        if (iDen%2!=0) {
+            iDen=iDen+1;
+            iNum++;
+            cout << iNum << '/' << iDen << " + ";
+        }
+        
+    }
     
     
     return 0;
