@@ -11,7 +11,16 @@ using namespace std;
 
 int main() {
     
+    int iTerminos, iNum, iDen;
+    
     cout << "Ingresa el numero de terminos de la sumatoria" << endl;
+    cin >> iTerminos;
+    cout << "ingresa el numerador inicial"
+    cin >> iNum;
+    cout<< "Ingresa el Denominador inicial"
+    cin>> iDen;
+    
+    
     
     
     return 0;
